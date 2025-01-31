@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="mode">Focus Time</div>
+    <div class="timer">25:00</div>
+    <div class="controls">
+      <button class="start">Start</button>
+      <button class="reset">Reset</button>
+    </div>
+    <div class="progress-bar">
+      <div class="progress" style="width: 100%"></div>
+    </div>
+    
+    <div class="settings">
+      <div class="time-settings">
+        <div class="time-input">
+          <label>Focus</label>
+          <input type="number" class="focus-time" value="25" min="1" max="60">
+        </div>
+        <div class="time-input">
+          <label>Break</label>
+          <input type="number" class="break-time" value="5" min="1" max="30">
+        </div>
+        <div class="time-input">
+          <label>Long Break</label>
+          <input type="number" class="long-break-time" value="15" min="1" max="60">
+        </div>
+      </div>
+      
+      <div class="toggle-container">
+        <span>Sound Notifications</span>
+        <label class="toggle">
+          <input type="checkbox" class="sound-toggle" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="statistics">
+        <div>Total Pomodoros: <span id="pomodoro-count">0</span></div>
+      </div>
+    </div>
+  </div>
+  <audio id="notification-sound" src="notification.mp3"></audio>
+  <script src="popup.js"></script>
+</body>
+</html>
